@@ -3,7 +3,7 @@ import React from 'react';
 const ContactSection = () => {
     return (
         <>
-            <div class="bg-white py-16 px-4 sm:px-6 lg:py-24 lg:px-8" data-id="kizjsc01" data-line="301-385">
+            <div id="contact" class="bg-white py-16 px-4 sm:px-6 lg:py-24 lg:px-8" data-id="kizjsc01" data-line="301-385">
                 <div class="max-w-7xl mx-auto" data-id="cdc8aq2m" data-line="302-384">
                     <div class="text-center mb-12" data-id="2mwm3ccv" data-line="303-306">
                         <h2 class="text-3xl font-extrabold text-gray-900 mb-2" data-id="hvm2u06f" data-line="304-304">Get In Touch</h2>
@@ -45,16 +45,24 @@ const ContactSection = () => {
                                 </div>
                                 <div class="flex items-start" data-id="z6fddvdn" data-line="341-349">
                                     <div class="flex-shrink-0 h-10 w-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center text-primary" data-id="hwilpvpl" data-line="342-344">
-                                    <i className="fab fa-facebook-f" data-id="jq0qnx1l" data-line="343-343"></i>
+                                    <a 
+                                        href="https://www.facebook.com/imKaiO7/" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer" 
+                                        className="hover:underline text-primary"
+                                    >
+                                        <i className="fab fa-facebook-f" data-id="jq0qnx1l" data-line="343-343"></i>
+                                    </a>
+                                    
                                     </div>
                                     <div class="ml-4" data-id="d8klcqzx" data-line="345-348">
                                         <h4 class="text-sm font-medium text-gray-900" data-id="x4fm9cib" data-line="346-346">facebook</h4>
-                                        <p class="text-sm text-gray-500" data-id="tj2wtasj" data-line="347-347">https://www.facebook.com/imKaiO7/</p>
+                                        <p class="text-sm text-gray-500" data-id="tj2wtasj" data-line="347-347">Trần Nghĩa Công</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="md:w-1/2" data-id="ppeg71a3" data-line="352-382">
+                        <div id="contact" class="md:w-1/2" data-id="ppeg71a3" data-line="352-382">
                             <form class="space-y-6" data-id="vc5qeoda" data-line="353-381">
                                 <div class="grid grid-cols-1 gap-6 sm:grid-cols-2" data-id="ctjgabhl" data-line="354-363">
                                     <div data-id="qnc0j2ap" data-line="355-358">

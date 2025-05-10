@@ -5,7 +5,7 @@ const AboutSection = () => {
     <>
         <div className="bg-gray-50 py-16 px-4 sm:px-6 lg:py-24 lg:px-8" data-id="ld4o5ghw" data-line="101-187">
             <div className="max-w-7xl mx-auto" data-id="8j702bkm" data-line="102-186">
-                <div className="text-center mb-12" data-id="d62ryqi8" data-line="103-106">
+                <div id="about"  className="text-center mb-12" data-id="d62ryqi8" data-line="103-106">
                     <h2 className="text-3xl font-extrabold text-gray-900 mb-2" data-id="f24u9ekb" data-line="104-104">About Me</h2>
                     <div className="w-20 h-1 bg-primary mx-auto" data-id="gsxbhkr5" data-line="105-105"></div>
                 </div>
@@ -37,7 +37,7 @@ const AboutSection = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="md:w-1/2" data-id="9qtgqnqc" data-line="135-184">
+                    <div id="skills"  className="md:w-1/2" data-id="9qtgqnqc" data-line="135-184">
                         <h3 className="text-2xl font-semibold text-gray-900 mb-4" data-id="4ke1iyp1" data-line="136-136">My Skills</h3>
                         <div className="space-y-4" data-id="te6i431z" data-line="137-183">
                             <div data-id="ex4pnsj8" data-line="138-146">

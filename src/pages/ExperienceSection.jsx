@@ -3,7 +3,7 @@ import React from 'react';
 const ExperienceSection = () => {
   return (
     <>
-    <div class="bg-white py-16 px-4 sm:px-6 lg:py-24 lg:px-8" data-id="4qlftrkg" data-line="190-241">
+    <div id="experience" class="bg-white py-16 px-4 sm:px-6 lg:py-24 lg:px-8" data-id="4qlftrkg" data-line="190-241">
         <div class="max-w-7xl mx-auto" data-id="7ue0se1f" data-line="191-240">
             <div class="text-center mb-12" data-id="y79lk18o" data-line="192-195">
                 <h2 class="text-3xl font-extrabold text-gray-900 mb-2" data-id="vuzcltgp" data-line="193-193">Work Experience</h2>

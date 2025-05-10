@@ -3,7 +3,7 @@ import React from 'react';
 const HeroSection = () => {
   return (
     <>
-        <div class="bg-white pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8" data-id="sfaiwb6k" data-line="62-98">
+        <div id="home" class="bg-white pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8" data-id="sfaiwb6k" data-line="62-98">
             <div class="relative max-w-7xl mx-auto" data-id="nvxv3kn8" data-line="63-97">
                 <div class="flex flex-col md:flex-row items-center" data-id="009wha9n" data-line="64-96">
                     <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10" data-id="nbar8ia8" data-line="65-83">
@@ -11,7 +11,7 @@ const HeroSection = () => {
                             Hi, I'm <span class="text-primary" data-id="uvywlrc0" data-line="67-67">Trần Văn Nghĩa</span>
                         </h1>
                         <h2 class="text-2xl md:text-3xl font-semibold text-gray-600 mb-6" data-id="62up7hts" data-line="69-71">
-                            Full Stack Developer &amp; IT Specialist
+                            Full Stack Developer 
                         </h2>
                         <p class="text-lg text-gray-500 mb-8" data-id="ludvysr5" data-line="72-74">
                             I build exceptional digital experiences with modern technologies and clean code. Specialized in web applications, cloud solutions, and cybersecurity.

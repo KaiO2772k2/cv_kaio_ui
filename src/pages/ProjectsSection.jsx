@@ -34,7 +34,7 @@ const ProjectsSection = () => {
     }
 
     return (
-        <div className="bg-gray-50 py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
+        <div id="projects" className="bg-gray-50 py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl font-extrabold text-gray-900 mb-2">Featured Projects</h2>
