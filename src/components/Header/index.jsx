@@ -9,7 +9,7 @@ const Header = () => {
                 <div class="flex items-center" data-id="81hdbi3c" data-line="27-32">
                     <div class="flex-shrink-0 flex items-center" data-id="y15njvbd" data-line="28-31">
                         <i class="fas fa-laptop-code text-primary text-2xl mr-2" data-id="zyv26g1n" data-line="29-29"></i>
-                        <span class="text-xl font-bold text-gray-900" data-id="3br49mjk" data-line="30-30">DevPort</span>
+                        <span class="text-xl font-bold text-gray-900" data-id="3br49mjk" data-line="30-30">KaiO-Dev</span>
                     </div>
                 </div>
                 <div class="hidden sm:ml-6 sm:flex sm:items-center sm:space-x-8" data-id="e4b1prxv" data-line="33-39">

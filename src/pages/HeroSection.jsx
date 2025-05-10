@@ -36,8 +36,8 @@ const HeroSection = () => {
                             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-r from-primary to-secondary p-1" data-id="ey17e8op" data-line="86-88">
                                 <img 
                                     className="w-full h-full rounded-full object-cover border-4 border-white" 
-                                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3MzY5OTh8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYW58ZW58MHx8fHwxNzQ1ODI4ODkxfDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=400" 
-                                    alt="Profile Photo of John Doe" 
+                                    src="/avatar1.jpg" // Đường dẫn đến ảnh trong thư mục public
+                                    alt="Profile Photo of Trần Văn Nghĩa" 
                                     onError={(e) => { e.target.src = '/path-to-default-image.jpg'; }} // Thêm fallback nếu ảnh không tải được
                                     data-id="1g3e0sjf" 
                                     data-line="87-87"
