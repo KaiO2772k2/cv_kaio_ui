@@ -1,9 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
+import axios from 'axios';
 
 const ContactSection = () => {
-    const handleSubmit = (e) => {
+    const [formData, setFormData] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        subject: '',
+        message: ''
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("Form submitted");
+
+        // Kiểm tra các trường bắt buộc
+        if (!formData.firstName || !formData.lastName || !formData.email || !formData.subject || !formData.message) {
+            alert('Please fill in all required fields.');
+            return;
+        }
+
+        try {
+            const response = await axios.post('https://api-cv-tranvannghia.up.railway.app/api/contact/', formData);
+            if (response.status === 200) {
+                alert('Message sent successfully!');
+                setFormData({
+                    firstName: '',
+                    lastName: '',
+                    email: '',
+                    subject: '',
+                    message: ''
+                });
+            } else {
+                alert('Failed to send message. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error sending message:', error);
+            alert('An error occurred. Please try again later.');
+        }
     };
 
     return (
@@ -63,7 +104,8 @@ const ContactSection = () => {
                                             type="text"
                                             name="firstName"
                                             id="firstName"
-                                            defaultValue=""
+                                            value={formData.firstName}
+                                            onChange={handleChange}
                                             className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3"
                                         />
                                     </div>
@@ -73,7 +115,8 @@ const ContactSection = () => {
                                             type="text"
                                             name="lastName"
                                             id="lastName"
-                                            defaultValue=""
+                                            value={formData.lastName}
+                                            onChange={handleChange}
                                             className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3"
                                         />
                                     </div>
@@ -84,7 +127,8 @@ const ContactSection = () => {
                                         type="email"
                                         name="email"
                                         id="email"
-                                        defaultValue=""
+                                        value={formData.email}
+                                        onChange={handleChange}
                                         className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3"
                                     />
                                 </div>
@@ -94,7 +138,8 @@ const ContactSection = () => {
                                         type="text"
                                         name="subject"
                                         id="subject"
-                                        defaultValue=""
+                                        value={formData.subject}
+                                        onChange={handleChange}
                                         className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3"
                                     />
                                 </div>
@@ -104,7 +149,8 @@ const ContactSection = () => {
                                         id="message"
                                         name="message"
                                         rows="4"
-                                        defaultValue=""
+                                        value={formData.message}
+                                        onChange={handleChange}
                                         className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3"
                                     />
                                 </div>
