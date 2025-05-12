@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ContactSection = () => {
     const [formData, setFormData] = useState({
@@ -23,14 +25,14 @@ const ContactSection = () => {
 
         // Kiểm tra các trường bắt buộc
         if (!formData.firstName || !formData.lastName || !formData.email || !formData.subject || !formData.message) {
-            alert('Please fill in all required fields.');
+            toast.error('Please fill in all required fields.');
             return;
         }
 
         try {
             const response = await axios.post('https://api-cv-tranvannghia.up.railway.app/api/contact/', formData);
             if (response.status === 200) {
-                alert('Message sent successfully!');
+                toast.success('Message sent successfully!');
                 setFormData({
                     firstName: '',
                     lastName: '',
@@ -39,16 +41,17 @@ const ContactSection = () => {
                     message: ''
                 });
             } else {
-                alert('Failed to send message. Please try again.');
+                toast.error('Failed to send message. Please try again.');
             }
         } catch (error) {
             console.error('Error sending message:', error);
-            alert('An error occurred. Please try again later.');
+            toast.error('An error occurred. Please try again later.');
         }
     };
 
     return (
         <>
+            <ToastContainer />
             <div id="contact" className="bg-white py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-12">
