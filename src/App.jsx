@@ -9,11 +9,10 @@ import Footer from './components/Footer'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <body class="bg-gray-50" alt="IT Profile" data-id="v6937vz0" data-line="22-436">
+      <div className="bg-gray-50" alt="IT Profile" data-id="v6937vz0" data-line="22-436">
         <Header />
 
         <HeroSection />
@@ -24,7 +23,7 @@ function App() {
         <ProjectsSection />
         <ContactSection />
         <Footer />
-      </body>
+      </div>
     </>
   )
 }
