@@ -96,6 +96,23 @@ const ContactSection = () => {
                                         <p className="text-sm text-gray-500">0355988467</p>
                                     </div>
                                 </div>
+                                <div class="flex items-start" data-id="z6fddvdn" data-line="341-349">
+                                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center text-primary" data-id="hwilpvpl" data-line="342-344">
+                                    <a 
+                                        href="https://www.facebook.com/imKaiO7/" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer" 
+                                        className="hover:underline text-primary"
+                                    >
+                                        <i className="fab fa-facebook-f" data-id="jq0qnx1l" data-line="343-343"></i>
+                                    </a>
+                                    
+                                    </div>
+                                    <div class="ml-4" data-id="d8klcqzx" data-line="345-348">
+                                        <h4 class="text-sm font-medium text-gray-900" data-id="x4fm9cib" data-line="346-346">Facebook</h4>
+                                        <p class="text-sm text-gray-500" data-id="tj2wtasj" data-line="347-347">Trần Nghĩa Công</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div className="md:w-1/2">
