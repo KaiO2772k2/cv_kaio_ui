@@ -1,31 +1,30 @@
-import { useState } from 'react'
-import Header from './components/Header'
-import HeroSection from './pages/HeroSection'
-import AboutSection from './pages/AboutSection'
-import ExperienceSection from './pages/ExperienceSection'
-import ProjectsSection from './pages/ProjectsSection'
-import ContactSection from './pages/ContactSection'
-import Footer from './components/Footer'
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import HomePage from './pages/Home/index.jsx'; // import file mới
+import AboutSection from './pages/AboutSection';
+import ExperienceSection from './pages/ExperienceSection';
+import ProjectsSection from './pages/ProjectsSection';
+import ContactSection from './pages/ContactSection';
+import ProjectDetail from './pages/ProjectDetail/index.jsx'; // import file mới
 
 function App() {
-
   return (
-    <>
-      <div className="bg-gray-50" alt="IT Profile" data-id="v6937vz0" data-line="22-436">
-        <Header />
-
-        <HeroSection />
-
-        <AboutSection />
-
-        <ExperienceSection />
-        <ProjectsSection />
-        <ContactSection />
-        <Footer />
-      </div>
-    </>
-  )
+    <Router>
+      <Header />
+      <main className="pt-20">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutSection />} />
+          <Route path="/experience" element={<ExperienceSection />} />
+          <Route path="/projects" element={<ProjectsSection />} />
+          <Route path="/contact" element={<ContactSection />} />
+          <Route path="/projects/:id" element={<ProjectDetail />} />
+        </Routes>
+      </main>
+      <Footer />
+    </Router>
+  );
 }
 
-export default App
+export default App;
