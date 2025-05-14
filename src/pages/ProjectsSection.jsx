@@ -59,12 +59,14 @@ const ProjectsSection = () => {
                     </span>
                   ))}
                 </div>
-                <Link
-                  to={`/projects/${project.id}`}
-                  className="text-primary font-medium inline-flex items-center"
-                >
-                  View Project <i className="fas fa-arrow-right ml-2"></i>
-                </Link>
+                                <a
+                                    href={project.link || '#'}
+                                    className="text-primary font-medium inline-flex items-center"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    View Project <i className="fas fa-arrow-right ml-2"></i>
+                                </a>
               </div>
             </div>
           ))}
