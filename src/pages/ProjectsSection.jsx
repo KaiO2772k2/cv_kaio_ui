@@ -59,14 +59,14 @@ const ProjectsSection = () => {
                     </span>
                   ))}
                 </div>
-                                <a
-                                    href={project.link || '#'}
-                                    className="text-primary font-medium inline-flex items-center"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    View Project <i className="fas fa-arrow-right ml-2"></i>
-                                </a>
+                  <a
+                    href={project.link || '#'}
+                    className="text-primary font-medium inline-flex items-center"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                  View Project <i className="fas fa-arrow-right ml-2"></i>
+                  </a>
               </div>
             </div>
           ))}
