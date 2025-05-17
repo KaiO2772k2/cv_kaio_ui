@@ -63,7 +63,8 @@ const ProjectsSection = () => {
                   to={`/projects/${project.id}`}
                   className="text-primary font-medium inline-flex items-center"
                 >
-                  View Project <i className="fas fa-arrow-right ml-2"></i>
+                  View Project 
+                  <i className="fas fa-arrow-right ml-2"></i>
                 </Link>
               </div>
             </div>
