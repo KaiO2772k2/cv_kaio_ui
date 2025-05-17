@@ -59,12 +59,12 @@ const ProjectsSection = () => {
                     </span>
                   ))}
                 </div>
-                    <Link
-                      to={`/projects/${project.id}`}
-                      className="text-primary font-medium inline-flex items-center"
-                    >
-                      View Project <i className="fas fa-arrow-right ml-2"></i>
-                    </Link>
+                <Link
+                  to={`/projects/${project.id}`}
+                  className="text-primary font-medium inline-flex items-center"
+                >
+                  View Project <i className="fas fa-arrow-right ml-2"></i>
+                </Link>
               </div>
             </div>
           ))}
