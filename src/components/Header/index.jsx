@@ -1,8 +1,24 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false); // State để quản lý trạng thái menu
     const [activeMenu, setActiveMenu] = useState('home'); // State để lưu mục đang được chọn
+    const navigate = useNavigate();
+
+    const handleMenuClick = (menu) => {
+        setActiveMenu(menu);
+        closeMenu();
+
+        // Navigate về root
+        navigate('/');
+
+        // Delay chút rồi scroll
+        setTimeout(() => {
+        const el = document.getElementById(menu);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+    };
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen); // Đảo ngược trạng thái menu
@@ -12,10 +28,10 @@ const Header = () => {
         setIsMenuOpen(false); // Đóng menu khi nhấn vào một liên kết
     };
 
-    const handleMenuClick = (menu) => {
-        setActiveMenu(menu); // Cập nhật mục đang được chọn
-        closeMenu(); // Đóng menu (trong chế độ mobile)
-    };
+    // const handleMenuClick = (menu) => {
+    //     setActiveMenu(menu); // Cập nhật mục đang được chọn
+    //     closeMenu(); // Đóng menu (trong chế độ mobile)
+    // };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -121,7 +137,7 @@ const Header = () => {
                 <div className={`${isMenuOpen ? 'block' : 'hidden'} sm:hidden`} id="mobile-menu">
                     <div className="pt-2 pb-3 space-y-1">
                         <a
-                            href="#home"
+                            href="/#home"
                             className={`block px-3 py-2 text-base font-medium ${
                                 activeMenu === 'home' ? 'text-primary border-b-2 border-primary' : 'text-gray-900 hover:text-primary'
                             }`}
@@ -130,7 +146,7 @@ const Header = () => {
                             Home
                         </a>
                         <a
-                            href="#about"
+                            href="/#about"
                             className={`block px-3 py-2 text-base font-medium ${
                                 activeMenu === 'about' ? 'text-primary border-b-2 border-primary' : 'text-gray-900 hover:text-primary'
                             }`}
@@ -139,7 +155,7 @@ const Header = () => {
                             About
                         </a>
                         <a
-                            href="#experience"
+                            href="/#experience"
                             className={`block px-3 py-2 text-base font-medium ${
                                 activeMenu === 'experience' ? 'text-primary border-b-2 border-primary' : 'text-gray-900 hover:text-primary'
                             }`}
@@ -148,7 +164,7 @@ const Header = () => {
                             Experience
                         </a>
                         <a
-                            href="#projects"
+                            href="/#projects"
                             className={`block px-3 py-2 text-base font-medium ${
                                 activeMenu === 'projects' ? 'text-primary border-b-2 border-primary' : 'text-gray-900 hover:text-primary'
                             }`}
@@ -157,7 +173,7 @@ const Header = () => {
                             Projects
                         </a>
                         <a
-                            href="#contact"
+                            href="/#contact"
                             className={`block px-3 py-2 text-base font-medium ${
                                 activeMenu === 'contact' ? 'text-primary border-b-2 border-primary' : 'text-gray-900 hover:text-primary'
                             }`}
