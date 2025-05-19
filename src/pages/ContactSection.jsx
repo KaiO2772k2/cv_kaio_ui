@@ -78,14 +78,14 @@ const ContactSection = () => {
                                     <div className="flex-shrink-0 h-10 w-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center text-primary">
                                         <i className="fas fa-envelope"></i>
                                     </div>
-                                    <div className="ml-4">
-                                        <h4 className="text-sm font-medium text-gray-900">Email</h4>
-                                        <p className="text-sm text-gray-500">
-                                            <a href="mailto:nghiatran1527@gmail.com" className="hover:underline text-primary">
+                                    <a href="mailto:nghiatran1527@gmail.com" className="hover:underline">
+                                        <div className="ml-4">
+                                            <h4 className="text-sm font-medium text-gray-900">Email</h4>
+                                            <p className="text-sm text-gray-500">
                                                 nghiatran1527@gmail.com
-                                            </a>
-                                        </p>
-                                    </div>
+                                            </p>
+                                        </div>
+                                    </a>
                                 </div>
                                 <div className="flex items-start">
                                     <div className="flex-shrink-0 h-10 w-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center text-primary">
@@ -98,20 +98,21 @@ const ContactSection = () => {
                                 </div>
                                 <div className="flex items-start" data-id="z6fddvdn" data-line="341-349">
                                     <div className="flex-shrink-0 h-10 w-10 rounded-full bg-primary bg-opacity-10 flex items-center justify-center text-primary" data-id="hwilpvpl" data-line="342-344">
+                                        <i className="fab fa-facebook-f" data-id="jq0qnx1l" data-line="343-343"></i>
+                                    
+                                    
+                                    </div>
                                     <a 
                                         href="https://www.facebook.com/imKaiO7/" 
                                         target="_blank" 
                                         rel="noopener noreferrer" 
                                         className="hover:underline text-primary"
                                     >
-                                        <i className="fab fa-facebook-f" data-id="jq0qnx1l" data-line="343-343"></i>
+                                        <div className="ml-4" data-id="d8klcqzx" data-line="345-348">
+                                            <h4 className="text-sm font-medium text-gray-900" data-id="x4fm9cib" data-line="346-346">Facebook</h4>
+                                            <p className="text-sm text-gray-500" data-id="tj2wtasj" data-line="347-347">Trần Nghĩa Công</p>
+                                        </div>
                                     </a>
-                                    
-                                    </div>
-                                    <div className="ml-4" data-id="d8klcqzx" data-line="345-348">
-                                        <h4 className="text-sm font-medium text-gray-900" data-id="x4fm9cib" data-line="346-346">Facebook</h4>
-                                        <p className="text-sm text-gray-500" data-id="tj2wtasj" data-line="347-347">Trần Nghĩa Công</p>
-                                    </div>
                                 </div>
                             </div>
                         </div>
