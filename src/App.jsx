@@ -7,6 +7,7 @@ import ExperienceSection from './pages/ExperienceSection';
 import ProjectsSection from './pages/ProjectsSection';
 import ContactSection from './pages/ContactSection';
 import ProjectDetail from './pages/ProjectDetail/index.jsx'; // import file mới
+import './App.css'; // import file mới
 
 function App() {
   return (
