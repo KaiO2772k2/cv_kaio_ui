@@ -11,6 +11,7 @@ import './App.css'; // import file mới
 
 function App() {
   return (
+    <div className="overflow-x-hidden max-w-screen">
     <Router>
       <Header />
       <main className="pt-20">
@@ -25,6 +26,7 @@ function App() {
       </main>
       <Footer />
     </Router>
+    </div>
   );
 }
 
