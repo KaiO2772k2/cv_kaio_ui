@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom'; // 👈 Thêm dòng này
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next'; // 👈 Thêm
 
 const ProjectsSection = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
+  const { i18n, t } = useTranslation(); // 👈 Lấy i18n
   const BASE_IMAGE_URL = "https://res.cloudinary.com/dzdpbg0wg/";
 
   useEffect(() => {
@@ -23,18 +25,18 @@ const ProjectsSection = () => {
   }, []);
 
   if (loading) {
-    return <div className="text-center py-16">Loading projects...</div>;
+    return <div className="text-center py-16">{t('loading') || 'Loading projects...'}</div>;
   }
 
   if (!projects.length) {
-    return <div className="text-center py-16 text-red-500">No projects available.</div>;
+    return <div className="text-center py-16 text-red-500">{t('no_projects') || 'No projects available.'}</div>;
   }
 
   return (
     <div id="projects" className="bg-gray-50 py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-extrabold text-gray-900 mb-2">Featured Projects</h2>
+          <h2 className="text-3xl font-extrabold text-gray-900 mb-2">{t('projects_title') || 'Featured Projects'}</h2>
           <div className="w-20 h-1 bg-primary mx-auto"></div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -51,7 +53,9 @@ const ProjectsSection = () => {
               />
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{project.name}</h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
+                <p className="text-gray-600 mb-4">
+                  {i18n.language === 'vi' ? project.description_vn : project.description}
+                </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.languages?.map((language, langIndex) => (
                     <span key={langIndex} className="px-2 py-1 text-xs rounded-full bg-blue-100 text-blue-800">
@@ -63,7 +67,7 @@ const ProjectsSection = () => {
                   to={`/projects/${project.id}`}
                   className="text-primary font-medium inline-flex items-center"
                 >
-                  View Project 
+                  {t('view_project') || 'View Project'}
                   <i className="fas fa-arrow-right ml-2"></i>
                 </Link>
               </div>

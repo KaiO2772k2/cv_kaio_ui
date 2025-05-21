@@ -8,10 +8,11 @@ import ProjectsSection from './pages/ProjectsSection';
 import ContactSection from './pages/ContactSection';
 import ProjectDetail from './pages/ProjectDetail/index.jsx'; // import file mới
 import './App.css'; // import file mới
+import './i18n.js'
 
 function App() {
   return (
-    <div className="overflow-x-hidden max-w-screen">
+    <div className="bg-gray-50 overflow-x-hidden max-w-screen">
     <Router>
       <Header />
       <main className="pt-20">
