@@ -27,6 +27,7 @@ const Header = () => {
     i18n.changeLanguage(lang);
     localStorage.setItem('lang', lang);
     setDropdownOpen(false);
+    closeMenu();
   };
 
   useEffect(() => {
@@ -78,7 +79,7 @@ const Header = () => {
                 </a>
               ))}
 
-              {/* Language dropdown */}
+              {/* Language dropdown for desktop */}
               <div className="relative">
                 <button
                   onClick={toggleDropdown}
@@ -138,6 +139,25 @@ const Header = () => {
                 {t(menu)}
               </a>
             ))}
+          </div>
+
+          {/* Language selection for mobile */}
+          <div className="border-t border-gray-200 pt-4">
+            <div className="px-3">
+              <span className="block text-sm font-medium text-gray-500 mb-2">{t('language')}</span>
+              <button
+                onClick={() => changeLanguage('en')}
+                className="block w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-100"
+              >
+                {t('english')}
+              </button>
+              <button
+                onClick={() => changeLanguage('vi')}
+                className="block w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-100"
+              >
+                {t('vietnamese')}
+              </button>
+            </div>
           </div>
         </div>
       </nav>
