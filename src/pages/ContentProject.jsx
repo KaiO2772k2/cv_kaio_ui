@@ -1,7 +1,20 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const ContentProject = ({ data }) => {
-    const BASE_IMAGE_URL = "https://res.cloudinary.com/dzdpbg0wg/";
+  const { i18n, t } = useTranslation();
+  const BASE_IMAGE_URL = "https://res.cloudinary.com/dzdpbg0wg/";
+
+  // Lấy mô tả dài dựa trên ngôn ngữ hiện tại
+  const description =
+    i18n.language === 'vi'
+      ? data.project_details[0]?.description_long_vn
+      : data.project_details[0]?.description_long;
+
+    const date =
+    i18n.language === 'vi'
+      ? data.project_details[0]?.date_vn
+      : data.project_details[0]?.date;
 
     return (
         <>
@@ -23,13 +36,13 @@ const ContentProject = ({ data }) => {
                         <div className="flex items-center space-x-4 mb-6" data-id="028arrii" data-line="34-37">
                             <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium" data-id="rrhedkdl" data-line="35-35">{data.project_details[0]?.name_type}</span>
                             <span className="text-gray-500" data-id="lf9s9gjp" data-line="36-36">
-                                <i className="far fa-calendar-alt mr-1" data-id="5oeg9rah" data-line="36-36"></i> {data.project_details[0]?.date}
+                                <i className="far fa-calendar-alt mr-1" data-id="5oeg9rah" data-line="36-36"></i> {date}
                             </span>
                         </div>
                         <p className="text-gray-700 mb-6 leading-relaxed" data-id="v78lct2e" data-line="38-40">
-                            {data.project_details[0]?.description_long}
+                            {description}
                         </p>
-                        <h2 className="text-xl font-semibold text-gray-800 mb-3" data-id="p30ktj7h" data-line="41-41">Project Features</h2>
+                        <h2 className="text-xl font-semibold text-gray-800 mb-3" data-id="p30ktj7h" data-line="41-41">{t('project.features_title')}</h2>
                         <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8" data-id="scabwu5a" data-line="42-67">
                             {data.project_details?.[0]?.features?.map((feature) => (
                                 <li key={feature.id} className="flex items-start">
@@ -38,7 +51,7 @@ const ContentProject = ({ data }) => {
                                 </li>
                             ))}
                         </ul>
-                        <h2 className="text-xl font-semibold text-gray-800 mb-3" data-id="za0iiir1" data-line="68-68">Technologies Used</h2>
+                        <h2 className="text-xl font-semibold text-gray-800 mb-3" data-id="za0iiir1" data-line="68-68">{t('project.technologies_title')}</h2>
                         <div className="flex flex-wrap gap-3 mb-8" data-id="93j5uz2f" data-line="69-78">
                             {data.languages?.map((lang) => (
                                 <span
