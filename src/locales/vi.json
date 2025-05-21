@@ -8,10 +8,10 @@
   "english": "Tiếng Anh",
   "vietnamese": "Tiếng Việt",
     "hero": {
-    "greeting": "Xin chào, tôi là",
+    "greeting": "Xin chào, Tôi là",
     "name": "Trần Văn Nghĩa",
     "title": "Lập Trình Viên Full Stack",
-    "description": "Tôi xây dựng trải nghiệm kỹ thuật số xuất sắc với công nghệ hiện đại và mã sạch. Chuyên về ứng dụng web, giải pháp đám mây và bảo mật mạng.",
+    "description": "Tôi xây dựng trải nghiệm kỹ thuật số xuất sắc với công nghệ hiện đại và mã sạch. Chuyên về ứng dụng web, giải pháp đám mây, bảo mật mạng và có kiến ​​thức thực tế về phát triển di động.",
     "view_work": "Xem Công Việc",
     "download_cv": "Tải CV"
     },
